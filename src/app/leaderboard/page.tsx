@@ -28,10 +28,9 @@ export default function LeaderboardPage() {
     }
   }, [])
 
-  const handleNewTournament = () => {
-    localStorage.removeItem('players')
-    localStorage.removeItem('rounds')
-    window.location.href = '/'
+  const handleStartDrafting = () => {
+    // Navigate to drafting page
+    window.location.href = '/draft'
   }
 
   const getRankIcon = (index: number) => {
@@ -115,13 +114,13 @@ export default function LeaderboardPage() {
           ))}
         </div>
 
-        {/* New Tournament Button */}
+        {/* Start Drafting Button */}
         <div className="flex justify-center">
           <Button
-            onClick={handleNewTournament}
+            onClick={handleStartDrafting}
             className="bg-[#415231] hover:bg-[#536842] text-white px-8 py-6 text-lg"
           >
-            Start New Tournament
+            Start Drafting
           </Button>
         </div>
       </main>
